@@ -4,7 +4,7 @@ const connectDB = require("./db/connectDB");
 const cloudinary = require("cloudinary");
 
 // Configura dotenv prima di tutto
-dotenv.config({ path: "backend/.env" });
+dotenv.config();
 
 // Gestione degli errori non catturati
 process.on("uncaughtException", (err) => {
@@ -24,8 +24,8 @@ async function startServer() {
         // Configurazione Cloudinary
         cloudinary.config({
             cloud_name: process.env.CLOUDINARY_NAME,
-            api_key: process.env.API_KEY,
-            api_secret: process.env.API_SECRET,
+            api_key: process.env.CLOUDINARY_API_KEY,
+            api_secret: process.env.CLOUDINARY_API_SECRET,
         });
 
         // Avvio del server

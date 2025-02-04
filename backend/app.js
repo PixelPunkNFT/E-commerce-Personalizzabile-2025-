@@ -34,10 +34,7 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(fileUpload());
 
 // Configura CORS
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  credentials: true
-}));
+app.use(cors());
 
 // Configura route API
 app.use("/api/v1", product);
@@ -60,11 +57,12 @@ app.use(errorMiddleware);
 
 // Servi file statici in production
 if (process.env.NODE_ENV === 'production') {
-  const __dirname1 = path.resolve();
-  app.use(express.static(path.join(__dirname1, "/frontend/build")));
-  app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
-  );
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+  app.get("*", (req, res) => {
+    if (!req.path.startsWith('/api/')) {
+      res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+    }
+  });
 }
 
 module.exports = app;
