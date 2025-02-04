@@ -1,0 +1,196 @@
+.user-list {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f1f1f1;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  overflow: hidden;
+  margin-top: -1rem !important;
+  padding: 0;
+}
+
+.users-container {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 200px);
+  overflow: hidden;
+}
+
+.users-list {
+  width: 40%;
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-item:hover {
+  background-color: #f5f5f5;
+}
+
+.user-item.selected {
+  background-color: #f0f0f0;
+  border-left: 4px solid #ed1c24;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-weight: bold;
+  color: #666;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.user-info p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.user-details {
+  width: 60%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.user-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-details-content {
+  display: grid;
+  gap: 20px;
+}
+
+.user-role {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.user-role.admin {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.user-role.user {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.no-user-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  font-style: italic;
+}
+
+.user-field {
+  margin-bottom: 16px;
+}
+
+.user-field label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #666;
+}
+
+.user-field p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Media Queries per il responsive */
+@media screen and (max-width: 768px) {
+  .users-container {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+
+  .users-list {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .user-details {
+    width: 100%;
+  }
+
+  .user-details-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .user-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .user-info p {
+    font-size: 0.8rem;
+  }
+
+  .user-field label {
+    font-size: 0.9rem;
+  }
+
+  .user-field p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .user-details {
+    padding: 16px;
+  }
+
+  .user-details-header {
+    margin-bottom: 16px;
+  }
+
+  .user-details-content {
+    gap: 12px;
+  }
+}

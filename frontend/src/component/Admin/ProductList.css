@@ -1,0 +1,260 @@
+.product-list {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f1f1f1;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  overflow: hidden;
+  margin-top: -1rem !important;
+  padding: 0;
+}
+
+.listSidebar {
+  width: 20%;
+  margin: 0;
+  height: fit-content;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.toggleBox {
+  width: 16rem;
+  margin: 0;
+  height: fit-content;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  display: block;
+  z-index: 100;
+  position: absolute;
+  top: 58px;
+  left: 17px;
+}
+
+.list-table {
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.products-container {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 200px);
+  overflow: hidden;
+}
+
+.products-list {
+  width: 40%;
+  overflow-y: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-item:hover {
+  background-color: #f5f5f5;
+}
+
+.product-item.selected {
+  background-color: #f0f0f0;
+  border-left: 4px solid #ed1c24;
+}
+
+.product-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+
+.product-details {
+  width: 60%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.product-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.product-details-content {
+  display: grid;
+  gap: 20px;
+}
+
+.sizes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  max-width: 200px;
+}
+
+.size-item {
+  background-color: #f5f5f5;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.size-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.no-product-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  font-style: italic;
+}
+
+.productListContainer {
+  background-color: white;
+  width: 96%;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 1px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.productListHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px;
+  margin: 0;
+  color: #414141;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.icon- {
+  font-size: 20px;
+  color: #fff;
+  background-color: #414141;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 3rem;
+}
+
+.iconbtn {
+  font-size: 20px;
+  color: #fff;
+  background-color: #414141;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.icon-:hover {
+  background-color: #ed1c24;
+}
+
+.iconbtn:hover {
+  background-color: #ed1c24;
+}
+
+/* Media Queries per il responsive */
+@media screen and (max-width: 999px) {
+  .listSidebar {
+    display: none;
+  }
+
+  .list-table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products-container {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+
+  .products-list {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .product-details {
+    width: 100%;
+  }
+
+  .product-details-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .product-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sizes-grid {
+    max-width: 100%;
+  }
+
+  .productListHeading {
+    font-size: 1.25rem;
+  }
+
+  .icon-, .iconbtn {
+    font-size: 18px;
+    padding: 4px;
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .productListContainer {
+    padding: 0.5rem;
+    width: 98%;
+  }
+
+  .product-details {
+    padding: 16px;
+  }
+
+  .product-details-header {
+    margin-bottom: 16px;
+  }
+
+  .product-details-content {
+    gap: 12px;
+  }
+
+  .size-item {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

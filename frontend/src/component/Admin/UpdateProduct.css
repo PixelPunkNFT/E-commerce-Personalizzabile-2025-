@@ -1,0 +1,79 @@
+.sizesContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.sizeRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.quantityInput {
+  width: 120px;
+}
+
+/* Stile per il checkbox */
+.MuiCheckbox-root {
+  color: #414141;
+}
+
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: #ed1c24;
+}
+
+/* Stile per il label del checkbox */
+.MuiFormControlLabel-root {
+  margin-right: 20px;
+}
+
+/* Stile per il campo di input della quantità */
+.MuiTextField-root.quantityInput {
+  margin-left: 10px;
+}
+
+.MuiTextField-root.quantityInput .MuiOutlinedInput-root {
+  border-radius: 4px;
+}
+
+.MuiTextField-root.quantityInput .MuiOutlinedInput-input {
+  padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .sizeRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .MuiTextField-root.quantityInput {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.imageArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 150px;
+  margin: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}

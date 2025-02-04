@@ -1,0 +1,148 @@
+.order-details {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.order-details:hover {
+  transform: translateY(-2px);
+}
+
+.order-details__image {
+  width: 155px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-details__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-details__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212529;
+  margin: 0;
+}
+
+.order-details__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.order-details__label {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.order-details__value {
+  color: #212529;
+  font-weight: 500;
+}
+
+.order-details__prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.order-details__final-price {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.order-details__discount-price {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.order-details__payment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.order-details__payment-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+@media screen and (max-width: 899px) {
+  .order-details {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .order-details__image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .order-details__content {
+    gap: 0.5rem;
+  }
+
+  .order-details__title {
+    font-size: 1rem;
+  }
+
+  .order-details__info {
+    font-size: 0.85rem;
+  }
+
+  .order-details__final-price {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .order-details {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .order-details__image {
+    height: 150px;
+  }
+
+  .order-details__prices {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .order-details__payment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-details__payment-status {
+    width: 100%;
+    justify-content: center;
+  }
+}

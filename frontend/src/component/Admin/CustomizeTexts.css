@@ -1,0 +1,57 @@
+.customize-texts {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.customize-texts-first-box {
+  width: 15%;
+}
+
+.customize-texts-second-box {
+  width: 85%;
+}
+
+.customize-texts-content {
+  padding: 20px;
+}
+
+.customize-texts-title {
+  margin-bottom: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapse-button {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin-left: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.collapse-button:hover {
+  background-color: #eeeeee;
+  border-color: #ccc;
+}
+
+.collapse-button svg {
+  transition: transform 0.3s;
+  margin-left: 8px;
+}
+
+.collapse-button.open svg {
+  transform: rotate(180deg);
+}
+
+.collapse-button span {
+  margin-right: 4px;
+}

@@ -1,0 +1,145 @@
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.product-section {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.description {
+  text-align: center;
+}
+
+.description h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.description h3 {
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+.description p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkout-button, .portal-button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover, .portal-button:hover {
+  background-color: #0056b3;
+}
+
+.checkout-button:disabled, .portal-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+}
+
+.success-section {
+  text-align: center;
+}
+
+.success-product {
+  margin-bottom: 3rem;
+}
+
+.success-description h3 {
+  color: #28a745;
+}
+
+.portal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .containers {
+    padding: 1rem;
+  }
+
+  .product-section {
+    padding: 1rem;
+  }
+
+  .description h1 {
+    font-size: 1.5rem;
+  }
+
+  .description h3 {
+    font-size: 1.2rem;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+  }
+
+  .checkout-button, .portal-button {
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+  }
+}
