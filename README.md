@@ -1,4 +1,4 @@
-# E-Commerce Shopping App
+# E-Commerce Shopping App SAAS
 
 ## Introduzione
 Benvenuti nel nostro E-commerce, un'applicazione completa costruita utilizzando lo stack MERN (MongoDB, Express, React, Node.js) e Material-UI (MUI) per l'interfaccia utente. Questo progetto offre modalità utente normale e amministratore, fornendo un'ampia gamma di funzionalità per migliorare l'esperienza di shopping.
